@@ -2,7 +2,7 @@ import {Account} from "./Account"
 import {displayClassNameWithPurpose} from "./decorators";
 let d = new Date();
 
-@displayClassNameWithPurpose("To prove typescript is wrong and that it sometimes sucks")
+@displayClassNameWithPurpose("This checking class has a withdraw, deposit, and advanceDate methods to do the logic work behind the bank application")
 export class CheckingAccount implements Account{
     dateOpened: Date = new Date(2018, 1, 0);
     transactionNumber: number = 0;

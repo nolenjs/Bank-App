@@ -37,16 +37,6 @@ let SavingsAccount = class SavingsAccount {
         else {
             console.log(transaction.errorMessage);
         }
-        let holder = this.accountHolderBirthDate;
-        let year = d.getFullYear() - holder.getFullYear();
-        if (transaction.resultBalance > 0) {
-            if (year < 60 && d.getMonth() === holder.getMonth() && d.getDate() === holder.getDate()) {
-                transaction.resultBalance -= (amount / 10);
-            }
-            transaction.success = true;
-            this.accountHistory[this.accountHistory.length] = transaction;
-            return transaction;
-        }
     }
     depositMoney(amount, description, date) {
         let transaction = {
@@ -99,7 +89,7 @@ let SavingsAccount = class SavingsAccount {
     }
 };
 SavingsAccount = __decorate([
-    decorators_1.displayClassNameWithPurpose("To prove typescript is wrong and that it sometimes sucks")
+    decorators_1.displayClassNameWithPurpose("This savings class has a withdraw, deposit, and advanceDate methods to do the logic work behind the bank application")
 ], SavingsAccount);
 exports.SavingsAccount = SavingsAccount;
 //# sourceMappingURL=SavingsAccount.js.map

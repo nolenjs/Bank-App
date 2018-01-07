@@ -1,4 +1,3 @@
-import {AccountType} from "./AccountType";
 import {TransactionOrigin} from "./TransactionOrigin";
 
 export interface Account {

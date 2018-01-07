@@ -3,7 +3,7 @@ import {TransactionOrigin} from "./TransactionOrigin";
 import {displayClassNameWithPurpose} from "./decorators";
 let d = new Date();
 
-@displayClassNameWithPurpose("To prove typescript is wrong and that it sometimes sucks")
+@displayClassNameWithPurpose("This savings class has a withdraw, deposit, and advanceDate methods to do the logic work behind the bank application")
 export class SavingsAccount implements Account{
     transactionNumber: number = 0;
     dateOpened: Date = new Date (2018, 0, 5);
@@ -30,16 +30,6 @@ export class SavingsAccount implements Account{
         }
         else{
             console.log(transaction.errorMessage);
-        }
-        let holder = this.accountHolderBirthDate;
-        let year = d.getFullYear() - holder.getFullYear();
-        if (transaction.resultBalance > 0){
-            if (year < 60 && d.getMonth() === holder.getMonth() && d.getDate() === holder.getDate()){
-                transaction.resultBalance -= (amount / 10);
-            }
-            transaction.success = true;
-            this.accountHistory[this.accountHistory.length] = transaction;
-            return transaction;
         }
     }
     depositMoney(amount, description, date) {

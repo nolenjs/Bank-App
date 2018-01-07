@@ -36,6 +36,9 @@ let CheckingAccount = class CheckingAccount {
             this.accountHistory[this.accountHistory.length] = transaction;
             return transaction;
         }
+        else {
+            console.log(transaction.errorMessage);
+        }
     }
     depositMoney(amount, description, date) {
         let transaction = {
@@ -87,7 +90,7 @@ let CheckingAccount = class CheckingAccount {
     }
 };
 CheckingAccount = __decorate([
-    decorators_1.displayClassNameWithPurpose("To prove typescript is wrong and that it sometimes sucks")
+    decorators_1.displayClassNameWithPurpose("This retirement class has a withdraw, deposit, and advanceDate methods to do the logic work behind the bank application")
 ], CheckingAccount);
 exports.CheckingAccount = CheckingAccount;
 //# sourceMappingURL=RetirementAccount.js.map
